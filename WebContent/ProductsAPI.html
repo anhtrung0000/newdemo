@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New product</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/angular.min.js"></script>
+    <script src="js/myApp.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+		<div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">List of the Products</h2>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-bordered table-striped table-hover table-responsive text-center
+                           ">
+                        <thead>
+                            <tr>
+                                <th>
+                                    ProductId
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Size
+                                </th>
+                                <th>
+                                    Color
+                                </th>
+                                <th>
+                                    Cloth
+                                </th>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Date
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in Products">
+                                <td>
+                                    {{x.ProductId}}
+                                </td>
+                                <td>
+                                    {{x.Name}}
+                                </td>
+                                <td>
+                                    {{x.Size}}
+                                </td>
+                                <td>
+                                    {{x.Color}}
+                                </td>
+                                <td>
+                                    {{x.Cloth}}
+                                </td>
+                                <td>
+                                    {{x.Description}}
+                                </td>
+                                <td>
+                                    {{x.Date}}
+                                </td>
+                                <td>
+                                    {{x.Price}}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="alert alert-danger" data-bind="visible: error">
+                <p data-bind="text: error"></p>
+            </div>
+        </div>
+    </div>
+		</div>
+</body>
+</html>
